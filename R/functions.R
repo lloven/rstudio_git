@@ -5,7 +5,7 @@ get_penguins_data <- function(file) {
     filter(!is.na(sex))
 }
 
-explore_penguins_data <- function(penguins_data) {
+scatter_penguins <- function(penguins_data) {
   ggplot(
     data = penguins_data,
     aes(x = flipper_length_mm, y = body_mass_g)
@@ -15,3 +15,5 @@ explore_penguins_data <- function(penguins_data) {
                size = 2) +
     scale_color_manual(values = c("darkorange","darkorchid","cyan4"))
 }
+
+
