@@ -1,10 +1,9 @@
 # targets main configuration file.
 
 library(targets)
-library(tidyverse)
 
 source("R/functions.R")
-tar_option_set(packages = c("readr", "dplyr", "ggplot2"))
+tar_option_set(packages = c("tidyverse"))
 
 list(
   tar_target(penguins_file, "data/penguins.csv", format = "file"),
