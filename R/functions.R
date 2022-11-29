@@ -16,6 +16,13 @@ scatter_penguins <- function(penguins_data) {
     scale_color_manual(values = c("darkorange","darkorchid","cyan4"))
 }
 
+scatter2_penguins <- function(penguins_data) {
+  ggplot(data = penguins_data, aes(x = bill_length_mm, y =bill_depth_mm)) +
+    geom_point(aes(color = species, 
+                   shape = species),
+               size = 2)  +
+    scale_color_manual(values = c("darkorange","darkorchid","cyan4"))
+}
 
 hist_penguins <- function(penguins_data) {
   ggplot(data = penguins_data, aes(x = flipper_length_mm)) +
