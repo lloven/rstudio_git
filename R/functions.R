@@ -17,3 +17,10 @@ scatter_penguins <- function(penguins_data) {
 }
 
 
+hist_penguins <- function(penguins_data) {
+  ggplot(data = penguins_data, aes(x = flipper_length_mm)) +
+    geom_histogram(aes(fill = species), alpha = 0.5, position = "identity") +
+    scale_fill_manual(values = c("darkorange","darkorchid","cyan4"))
+}
+
+
